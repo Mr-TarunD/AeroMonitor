@@ -1,4 +1,4 @@
-# AeroMonitor: IoT Air Quality & Environmental Monitoring System
+# AeroMonitor: IoT Air Quality & Monitoring System
 
 AeroMonitor is a comprehensive IoT project that uses an Arduino Mega to monitor a wide range of environmental data. It collects data from 8 different sensors, displays the status locally on an LCD, triggers a local buzzer for alarms, and uploads all data to the ThingSpeak cloud for remote monitoring.
 
@@ -7,9 +7,9 @@ This project also includes a three-page web dashboard (HTML/CSS/JS) that connect
 ## 🚀 Features
 
   * **Multi-Sensor Monitoring:** Actively monitors Temperature, Humidity, Air Quality (MQ-135), Smoke (MQ-2), LPG (MQ-6), Alcohol (MQ-7), CO (MQ-3), and Flame presence.
-  * [cite\_start]**Cloud Data Logging:** Connects to WiFi using an ESP8266 module to send all 8 sensor readings to a ThingSpeak channel every 10 seconds[cite: 31, 34].
-  * [cite\_start]**Local Display:** Sensor values are displayed sequentially on a 20x4 I2C LCD screen[cite: 20, 21, 22, 23, 24, 25].
-  * [cite\_start]**Local Alarms:** An active buzzer provides an audible alert if dangerous levels of smoke, flame, LPG, alcohol, or CO are detected[cite: 26, 27].
+  * **Cloud Data Logging:** Connects to WiFi using an ESP8266 module to send all 8 sensor readings to a ThingSpeak channel every 10 seconds.
+  * **Local Display:** Sensor values are displayed sequentially on a 20x4 I2C LCD screen.
+  * **Local Alarms:** An active buzzer provides an audible alert if dangerous levels of smoke or flame are detected.
   * **Web Dashboard:** A responsive web interface for remote monitoring:
       * `index.html`: A homepage linking to the data pages.
       * `livevaluedisplay.html`: Shows the latest value for all 8 sensors, updating every 5 seconds.
@@ -18,17 +18,17 @@ This project also includes a three-page web dashboard (HTML/CSS/JS) that connect
 ## 🛠️ Hardware Components
 
   * **Microcontroller:** Arduino Mega
-  * [cite\_start]**Connectivity:** ESP8266 WiFi Module (connected to `Serial1` [cite: 3, 8])
+  * **Connectivity:** ESP8266 WiFi Module (connected to `Serial1`)
   * **Display:** 20x4 I2C LCD Module
-  * [cite\_start]**Actuator:** 5V Active Buzzer [cite: 5]
+  * **Actuator:** 5V Active Buzzer
   * **Sensors:**
-      * [cite\_start]DHT11 (Temperature & Humidity) [cite: 4]
-      * [cite\_start]MQ-135 (Air Quality) [cite: 5]
-      * [cite\_start]MQ-2 (Smoke) [cite: 5]
-      * [cite\_start]MQ-6 (LPG) [cite: 5]
-      * [cite\_start]MQ-7 (Alcohol) [cite: 5]
-      * [cite\_start]MQ-3 (CO) [cite: 5]
-      * [cite\_start]Flame Sensor (Digital) [cite: 5]
+      * DHT11 (Temperature & Humidity) 
+      * MQ-135 (Air Quality)
+      * MQ-2 (Smoke)
+      * MQ-6 (LPG)
+      * MQ-7 (Alcohol)
+      * MQ-3 (CO) 
+      *Flame Sensor (Digital)
   * **From Diagram:** The circuit diagram also includes:
       * 2-Channel 5V Relay Module
       * 12V DC Fan
@@ -38,10 +38,10 @@ This project also includes a three-page web dashboard (HTML/CSS/JS) that connect
 
   * **Arduino IDE**
   * **Arduino Libraries:**
-      * [cite\_start]`WiFiEsp.h` [cite: 1]
-      * [cite\_start]`ThingSpeak.h` [cite: 1]
-      * [cite\_start]`DHT.h` [cite: 1]
-      * [cite\_start]`LiquidCrystal_I2C.h` [cite: 1]
+      * `WiFiEsp.h` 
+      * `ThingSpeak.h` 
+      * `DHT.h`
+      * `LiquidCrystal_I2C.h`
   * **Cloud Platform:**
       * [ThingSpeak](https://thingspeak.com/) (for data logging and API)
   * **Web Technologies:**
@@ -57,14 +57,14 @@ This project also includes a three-page web dashboard (HTML/CSS/JS) that connect
 ├── index.html                  # Web dashboard homepage
 ├── livegraph.html              # Web page for historical sensor graphs
 ├── livevaluedisplay.html       # Web page for latest sensor values
-└── Gaurav_Report.pdf-image-022.jpg # Hardware circuit diagram
+
 ```
 
 ## ⚙️ How It Works
 
-1.  **Hardware:** The Arduino Mega is the system's core. [cite\_start]It reads analog data from the MQ gas sensors and digital data from the DHT11 and Flame sensors[cite: 16, 17].
-2.  [cite\_start]**Local Processing:** The Arduino displays all sensor values sequentially on the 20x4 LCD [cite: 20-25]. [cite\_start]It simultaneously checks if any sensor values (Smoke, Flame, LPG, Alcohol, CO) have crossed their predefined safety thresholds[cite: 26]. [cite\_start]If a threshold is breached, it activates the `BUZZER_PIN`[cite: 27].
-3.  [cite\_start]**Cloud Upload:** The Arduino communicates with the ESP8266 module via `Serial1` [cite: 3, 8] [cite\_start]to connect to the local WiFi network[cite: 13, 14]. [cite\_start]Every 10 seconds, it formats the 8 sensor values and uploads them to 8 separate fields on a ThingSpeak channel [cite: 28-31, 34].
+1.  **Hardware:** The Arduino Mega is the system's core. It reads analog data from the MQ gas sensors and digital data from the DHT11 and Flame sensors.
+2.  **Local Processing:** The Arduino displays all sensor values sequentially on the 20x4 LCD. It simultaneously checks if any sensor values (Smoke, Flame, LPG, Alcohol, CO) have crossed their predefined safety thresholds. If a threshold is breached, it activates the `BUZZER_PIN`.
+3.  **Cloud Upload:** The Arduino communicates with the ESP8266 module via `Serial1` to connect to the local WiFi network. Every 10 seconds, it formats the 8 sensor values and uploads them to 8 separate fields on a ThingSpeak channel.
 4.  **Web Dashboard:** The HTML pages use JavaScript to make Fetch API calls to the ThingSpeak REST API.
       * `livevaluedisplay.html` requests the single most recent feed (`results=1`) and updates the text content of the page.
       * `livegraph.html` requests the 10 most recent feeds (`results=10`) and uses the Chart.js library to plot this data, refreshing every 5 seconds.
@@ -90,10 +90,10 @@ To get this project running, you need to configure three parts: ThingSpeak, the 
 
       * `WiFiEsp`
       * `ThingSpeak`
-      * `DHT sensor library` (by Adafruit)
+      * `DHT sensor library` 
       * `LiquidCrystal_I2C`
 
-3.  [cite\_start]Update the secret definitions at the top of the file with your credentials[cite: 1]:
+3.  Update the secret definitions at the top of the file with your credentials:
 
     ```c++
     #define SECRET_SSID "YOUR_WIFI_SSID"      // Your WiFi network name
@@ -125,11 +125,11 @@ The project uses 8 fields on ThingSpeak. Ensure they are configured in this orde
 
 | Field | Sensor Data | Arduino Code Reference |
 | :--- | :--- | :--- |
-| **Field 1** | Air Quality (MQ-135) | [cite\_start]`ThingSpeak.setField(1, airQuality);` [cite: 28] |
-| **Field 2** | Temperature (DHT11) | [cite\_start]`ThingSpeak.setField(2, temperature);` [cite: 28] |
-| **Field 3** | Humidity (DHT11) | [cite\_start]`ThingSpeak.setField(3, humidity);` [cite: 28, 29] |
-| **Field 4** | Flame | [cite\_start]`ThingSpeak.setField(4, flameValue);` [cite: 29] |
-| **Field 5** | CO (MQ-3) | [cite\_start]`ThingSpeak.setField(5, coValue);` [cite: 29] |
-| **Field 6** | Smoke (MQ-2) | [cite\_start]`ThingSpeak.setField(6, smokeValue);` [cite: 29] |
-| **Field 7** | Alcohol (MQ-7) | [cite\_start]`ThingSpeak.setField(7, alcoholValue);` [cite: 30] |
-| **Field 8** | LPG (MQ-6) | [cite\_start]`ThingSpeak.setField(8, lpgValue);` [cite: 30, 31] |
+| **Field 1** | Air Quality (MQ-135) | `ThingSpeak.setField(1, airQuality);`  |
+| **Field 2** | Temperature (DHT11) | `ThingSpeak.setField(2, temperature);`  |
+| **Field 3** | Humidity (DHT11) | `ThingSpeak.setField(3, humidity);`  |
+| **Field 4** | Flame | `ThingSpeak.setField(4, flameValue);`  |
+| **Field 5** | CO (MQ-3) | `ThingSpeak.setField(5, coValue);`  |
+| **Field 6** | Smoke (MQ-2) | `ThingSpeak.setField(6, smokeValue);`  |
+| **Field 7** | Alcohol (MQ-7) | `ThingSpeak.setField(7, alcoholValue);`  |
+| **Field 8** | LPG (MQ-6) | `ThingSpeak.setField(8, lpgValue);`  |
