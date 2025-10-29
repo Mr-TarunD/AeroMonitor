@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>AIR MONITOR HOME</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            padding: 20px;
+            background-color: #4CAF50;
+            color: white;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .header img {
+            width: 100px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .header h1 {
+            margin: 10px 0;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .card h2 {
+            margin: 10px 0;
+        }
+
+        .card a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .card a:hover {
+            background-color: #45a049;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            position: absolute;
+            margin-top: auto;
+            width: 100%;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .row .card {
+            flex: 1;
+            min-width: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>AIR MONITOR SYSTEM</h1>
+        <p>Monitor your environment in real-time</p>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="card">
+                <img src="live.jpg" alt="Live Value">
+                <h2>Live Values</h2>
+                <p>View real-time sensor data values.</p>
+                <a href="livevaluedisplay.html">View Live Values</a>
+            </div>
+
+            <div class="card">
+                <img src="graph.jpg" alt="Live Graph">
+                <h2>Live Graph</h2>
+                <p>Monitor live graphs of sensor data.</p>
+                <a href="livegraph.html">View Live Graph</a>
+            </div>
+
+            <div class="card">
+                <img src="about.png" alt="About">
+                <h2>About</h2>
+                <p>Learn more about the Air Monitor System.</p>
+                <a href="about.html">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Air Monitor System. All rights reserved.</p>
+    </div>
+</body>
+
+</html>
