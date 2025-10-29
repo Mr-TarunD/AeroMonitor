@@ -33,10 +33,7 @@ This project also includes a three-page web dashboard (HTML/CSS/JS) that connect
       * MQ-7 (Alcohol)
       * MQ-3 (CO) 
       *Flame Sensor (Digital)
-  * **From Diagram:** The circuit diagram also includes:
-      * 2-Channel 5V Relay Module
-      * 12V DC Fan
-      * 12V DC Water Pump
+ 
 
 ## 💻 Software, Libraries & Services
 
