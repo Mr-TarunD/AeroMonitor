@@ -32,7 +32,7 @@ This project also includes a three-page web dashboard (HTML/CSS/JS) that connect
       * MQ-6 (LPG)
       * MQ-7 (Alcohol)
       * MQ-3 (CO) 
-      *Flame Sensor (Digital)
+      * Flame Sensor (Digital)
  
 
 ## 💻 Software, Libraries & Services
