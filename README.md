@@ -2,11 +2,11 @@
 
 AeroMonitor is a comprehensive IoT project that uses an Arduino Mega to monitor a wide range of environmental data. It collects data from 8 different sensors, displays the status locally on an LCD, triggers a local buzzer for alarms, and uploads all data to the ThingSpeak cloud for remote monitoring.
 
-![AutoSlide Screenshot](https://github.com/Mr-TarunD/AeroMonitor/blob/59e5c34238d747469f7c2749bd87eab61d2ae13a/Image1.png)
+![AeroMonitor Screenshot](https://github.com/Mr-TarunD/AeroMonitor/blob/59e5c34238d747469f7c2749bd87eab61d2ae13a/Image1.png)
 
 This project also includes a three-page web dashboard (HTML/CSS/JS) that connects to the ThingSpeak API to display both the latest live sensor values and historical data in live-updating graphs.
 
-![AutoSlide Screenshot](https://github.com/Mr-TarunD/AeroMonitor/blob/59e5c34238d747469f7c2749bd87eab61d2ae13a/Image2.png)
+![AeroMonitor Screenshot](https://github.com/Mr-TarunD/AeroMonitor/blob/59e5c34238d747469f7c2749bd87eab61d2ae13a/Image2.png)
 
 ## 🚀 Features
 
